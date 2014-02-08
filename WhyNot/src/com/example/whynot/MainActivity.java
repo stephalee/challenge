@@ -7,16 +7,27 @@ import android.os.Message;
 import android.view.Menu;
 import android.view.View;
 
-import com.firebase.client.ChildEventListener;
-import com.firebase.client.DataSnapshot;
-import com.firebase.client.Firebase;
-import com.firebase.client.FirebaseError;
+//import com.firebase.client.ChildEventListener;
+//import com.firebase.client.DataSnapshot;
+//import com.firebase.client.Firebase;
+//import com.firebase.client.FirebaseError;
 
 //import com.firebase.client.DataSnapshot;
 //import com.firebase.client.Firebase;
 //import com.firebase.client.FirebaseError;
 //import com.firebase.client.ValueEventListener;
 
+
+/* This class functions as the homescreen of the application
+ * From here, the user can choose from a number of options:
+ * 		* GET a new challenge
+ * 		* GIVE (or CREATE) a new challenge
+ * 		* EXPLORE
+ * 			* the user's submissions for other users' challenges -- similar to a diary or journal
+ * 			* other submissions for challenges the user has completed
+ * 			* submissions from other users for challenges he has created
+ */
+ 
 public class MainActivity extends Activity {
 
     @Override
