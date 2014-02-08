@@ -3,37 +3,38 @@ package com.example.whynot;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Message;
 import android.view.Menu;
 import android.view.View;
 
-//import com.firebase.client.ChildEventListener;
-//import com.firebase.client.DataSnapshot;
-//import com.firebase.client.Firebase;
-//import com.firebase.client.FirebaseError;
+import com.firebase.client.DataSnapshot;
+import com.firebase.client.Firebase;
+import com.firebase.client.FirebaseError;
+import com.firebase.client.ValueEventListener;
 
-//import com.firebase.client.DataSnapshot;
-//import com.firebase.client.Firebase;
-//import com.firebase.client.FirebaseError;
-//import com.firebase.client.ValueEventListener;
-
-
-/* This class functions as the home screen of the application
- * From here, the user can choose from a number of options:
- * 		* GET a new challenge
- * 		* GIVE (or CREATE) a new challenge
- * 		* EXPLORE
- * 			* the user's submissions for other users' challenges -- similar to a diary or journal
- * 			* other submissions for challenges the user has completed
- * 			* submissions from other users for challenges he has created
- */
- 
 public class MainActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);   
+        setContentView(R.layout.activity_main);
+        
+     // Create a reference to a Firebase location
+        Firebase ref = new Firebase("https://sweltering-fire-3749.firebaseio.com/");
+
+        // Write data to Firebase
+        ref.setValue("Do you have data? You'll love Firebase.");
+
+        // Read data and react to changes
+        ref.addValueEventListener(new ValueEventListener() {
+
+            @Override
+            public void onDataChange(DataSnapshot snap) {
+                System.out.println(snap.getName() + " -> " + snap.getValue());
+            }
+
+            @Override public void onCancelled(FirebaseError f) { }
+        });
+        
     }
 
 
