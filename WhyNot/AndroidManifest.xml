@@ -5,8 +5,11 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="8"
+        android:minSdkVersion="11"
         android:targetSdkVersion="18" />
+    
+<!--     Internet Permission for FireBase -->
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -21,6 +24,30 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.whynot.DisplayGetActivity"
+            android:label="@string/title_activity_display_get"
+            android:parentActivityName="MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="MainActivity" />
+        </activity>
+        <activity
+            android:name="com.example.whynot.DisplayGiveActivity"
+            android:label="@string/title_activity_display_give"
+            android:parentActivityName="com.example.whynot.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.whynot.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.example.whynot.DisplayExploreActivity"
+            android:label="@string/title_activity_display_create"
+            android:parentActivityName="com.example.whynot.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.whynot.MainActivity" />
         </activity>
     </application>
 
