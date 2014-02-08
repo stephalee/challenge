@@ -1,3 +1,0 @@
-INDEX VERSION 1.126+/Users/slee/challenge/workspace/.metadata/.plugins/org.eclipse.jdt.core
-1787073278.index
-3529521954.index
