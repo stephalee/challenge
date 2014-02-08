@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
@@ -59,7 +60,7 @@ public class DisplayGiveActivity extends Activity {
 		return super.onOptionsItemSelected(item);
 	}
 	
-	// submit users challenge to firebase
+	// submit users challenge to Firebase
 	public void go_Submit(View view) {
 		Firebase ref = new Firebase("https://sweltering-fire-3749.firebaseio.com/");
 		Firebase challenges = ref.child("challenges");
@@ -74,6 +75,12 @@ public class DisplayGiveActivity extends Activity {
 		String pushedName = newPushRef.getName();
 		CHALLENGES.add(pushedName);
 		System.out.println(CHALLENGES);
+		
+		// After submitting go to Confirmation/SubmitAnother Screen
+		Intent intent = new Intent(this, DisplayGiveConfirmationActivity.class);
+    	startActivity(intent);
+		
+		
 	}
 
 }
