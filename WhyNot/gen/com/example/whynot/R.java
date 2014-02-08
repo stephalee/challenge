@@ -42,7 +42,8 @@ public final class R {
         public static final int display_explore=0x7f070000;
         public static final int display_get=0x7f070001;
         public static final int display_give=0x7f070002;
-        public static final int main=0x7f070003;
+        public static final int display_give_confirmation=0x7f070003;
+        public static final int main=0x7f070004;
     }
     public static final class string {
         public static final int action_settings=0x7f050001;

@@ -49,6 +49,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.whynot.MainActivity" />
         </activity>
+        <activity
+            android:name="com.example.whynot.DisplayGiveConfirmationActivity"
+            android:label="@string/title_activity_display_give"
+            android:parentActivityName="com.example.whynot.DisplayGiveActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.whynot.DisplayGiveActivity" />
+        </activity>
     </application>
 
 </manifest>
