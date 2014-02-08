@@ -18,7 +18,7 @@ import android.view.View;
 //import com.firebase.client.ValueEventListener;
 
 
-/* This class functions as the homescreen of the application
+/* This class functions as the home screen of the application
  * From here, the user can choose from a number of options:
  * 		* GET a new challenge
  * 		* GIVE (or CREATE) a new challenge
