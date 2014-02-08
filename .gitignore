@@ -1,4 +1,2 @@
-
-workspace/.metadata/.plugins/org.eclipse.jdt.launching/libraryInfos.xml
-
-*.xml
+.class
+.metadata
