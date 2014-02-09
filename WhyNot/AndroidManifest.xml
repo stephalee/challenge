@@ -58,7 +58,7 @@
         </activity>
         <activity
             android:name="com.example.whynot.DisplayGiveConfirmationActivity"
-            android:label="@string/title_activity_display_Give_Confirmation"
+            android:label="@string/title_activity_display_give_confirmation"
             android:parentActivityName="com.example.whynot.DisplayGiveActivity"
             android:theme="@style/BlueTheme" >
             <meta-data
