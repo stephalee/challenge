@@ -17,7 +17,7 @@
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_display_give">DisplayGiveActivity</string>
     <string name="title_activity_display_create">DisplayCreateActivity</string>
-    <string name="challenge">Pull From Database!</string>
+    <string name="challenge">Challenge taken from database.</string>
     <string name="yes">YES</string>
     <string name="no">NO</string>
     <string name="submit">SUBMIT</string>
