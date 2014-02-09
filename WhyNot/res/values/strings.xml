@@ -25,5 +25,7 @@
     <string name="goback">GO BACK</string>
     <string name="title_activity_display_submit">DisplaySubmitActivity</string>
     <string name="title_activity_display_give_confirmation">DisplayGiveConfirmationActivity</string>
+    <string name="go_home">GO HOME</string>
+    
 
 </resources>
