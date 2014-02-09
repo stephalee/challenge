@@ -10,7 +10,7 @@
     tools:context=".DisplayGetActivity" >
 
 <!--      Challenge text pulled from database -->
-    <TextView
+       <TextView
         android:id="@+id/chal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
@@ -36,6 +36,7 @@
         android:text="@string/no"
         style="@style/Button_style"
         android:onClick="go_No" />
+       
       </LinearLayout>  
 
 </LinearLayout>
