@@ -13,8 +13,7 @@
        <TextView
         android:id="@+id/chal"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        />
+        android:layout_height="wrap_content" />
     
 <!--     Button for user to accept challenge -->
      <LinearLayout 
@@ -24,15 +23,18 @@
        <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:text="@string/yes"
+        style="@style/Button_style"
         android:onClick="go_Yes" />
            
 <!--        Button for user not to accept challenge -->
        <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="right"
+       	android:layout_weight="1"
         android:text="@string/no"
+        style="@style/Button_style"
         android:onClick="go_No" />
        
       </LinearLayout>  

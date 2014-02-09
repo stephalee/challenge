@@ -7,8 +7,8 @@
     <uses-sdk
         android:minSdkVersion="11"
         android:targetSdkVersion="18" />
-    
-<!--     Internet Permission for FireBase -->
+
+    <!-- Internet Permission for FireBase -->
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -53,13 +53,8 @@
                 android:value="com.example.whynot.MainActivity" />
         </activity>
         <activity
-            android:name="com.example.whynot.DisplayGiveConfirmationActivity"
-            android:label="@string/title_activity_display_create_another"
-            android:parentActivityName="com.example.whynot.DisplayGiveActivity"
-            android:theme="@style/BlueTheme" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.whynot.DisplayGiveActivity" />
+            android:name="com.example.whynot.DisplaySubmitActivity"
+            android:label="@string/title_activity_display_submit" >
         </activity>
     </application>
 
