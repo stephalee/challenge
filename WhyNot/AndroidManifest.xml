@@ -52,6 +52,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.whynot.MainActivity" />
         </activity>
+        <activity
+            android:name="com.example.whynot.DisplayGiveConfirmationActivity"
+            android:label="@string/title_activity_display_create_another"
+            android:parentActivityName="com.example.whynot.DisplayGiveActivity"
+            android:theme="@style/BlueTheme" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.whynot.DisplayGiveActivity" />
+        </activity>
     </application>
 
 </manifest>
