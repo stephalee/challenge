@@ -1,12 +1,28 @@
 package com.example.whynot;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.StatusLine;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.DefaultHttpClient;
+
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.support.v4.app.NavUtils;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 public class DisplayGetActivity extends Activity {
 
@@ -14,7 +30,16 @@ public class DisplayGetActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		
+		  StrictMode.ThreadPolicy policy = new StrictMode.
+				  ThreadPolicy.Builder().permitAll().build();
+				    StrictMode.setThreadPolicy(policy); 
+				    
 		setContentView(R.layout.activity_display_get);
+		
+		String s = readChallenges();
+		TextView textview = (TextView) findViewById(R.id.chal);
+		textview.setText(s);
 		// Show the Up button in the action bar.
 		setupActionBar();
 	}
@@ -51,5 +76,32 @@ public class DisplayGetActivity extends Activity {
 		}
 		return super.onOptionsItemSelected(item);
 	}
+	
+	public String readChallenges() {
+	StringBuilder builder = new StringBuilder();
+    HttpClient client = new DefaultHttpClient();
+    HttpGet httpGet = new HttpGet("http://hbpchallenge.herokuapp.com/challenge");
+    try {
+      HttpResponse response = client.execute(httpGet);
+      StatusLine statusLine = response.getStatusLine();
+      int statusCode = statusLine.getStatusCode();
+      if (statusCode == 200) {
+        HttpEntity entity = response.getEntity();
+        InputStream content = entity.getContent();
+        BufferedReader reader = new BufferedReader(new InputStreamReader(content));
+        String line;
+        while ((line = reader.readLine()) != null) {
+          builder.append(line);
+        }
+      } else {
+        Log.e(DisplayExploreActivity.class.toString(), "Failed to download file");
+      }
+    } catch (ClientProtocolException e) {
+      e.printStackTrace();
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
+    return builder.toString();
+  }
 
 }

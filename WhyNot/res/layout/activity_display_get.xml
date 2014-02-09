@@ -10,10 +10,11 @@
 
 <!--      Challenge text pulled from database -->
     <TextView
+        android:id="@+id/chal"
         android:layout_weight="1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/challenge" />
+        />
     
 <!--     Button for user to accept challenge -->
        <Button
