@@ -12,6 +12,7 @@
     <!-- CHALLENGE SUBMISSION CONFIRMATION -->
     <string name="submission_confirm">You\'ve submitted a challenge!</string>
     <string name="submit_another_challenge">Submit another?</string>
+    <string name="title_activity_display_create_another">DisplayGiveConfirmationActivity</string>
     <string name="title_activity_display_get">DisplayGetActivity</string>
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_display_give">DisplayGiveActivity</string>
@@ -20,7 +21,7 @@
     <string name="yes">YES</string>
     <string name="no">NO</string>
     <string name="submit">SUBMIT</string>
-    <string name="submission">Enter challenge here...</string>
+    <string name="submission">Enter challenge here!</string>
     <string name="goback">GO BACK</string>
     <string name="title_activity_display_submit">DisplaySubmitActivity</string>
 
