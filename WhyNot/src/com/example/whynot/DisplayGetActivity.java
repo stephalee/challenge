@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.Random;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -12,9 +13,12 @@ import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.StrictMode;
@@ -22,6 +26,7 @@ import android.support.v4.app.NavUtils;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 
 public class DisplayGetActivity extends Activity {
@@ -37,9 +42,19 @@ public class DisplayGetActivity extends Activity {
 				    
 		setContentView(R.layout.activity_display_get);
 		
-		String s = readChallenges();
-		TextView textview = (TextView) findViewById(R.id.chal);
-		textview.setText(s);
+	    try {
+	        JSONArray jsonArray = new JSONArray(readChallenges());
+	        Log.i(DisplayGetActivity.class.getName(),
+	            "Number of entries " + jsonArray.length());
+	        Random r = new Random();
+	        int i = jsonArray.length();
+	          String jsonObject = jsonArray.getJSONObject(r.nextInt(i)).getString("description");
+//	          Log.i(DisplayGetActivity.class.getName(), jsonObject.names());
+	  	    TextView textview = (TextView) findViewById(R.id.chal);
+			textview.setText(jsonObject);
+	      } catch (Exception e) {
+	        e.printStackTrace();
+	      }
 		// Show the Up button in the action bar.
 		setupActionBar();
 	}
@@ -103,5 +118,17 @@ public class DisplayGetActivity extends Activity {
     }
     return builder.toString();
   }
+	
+    /** Called when user clicks the YES button */
+    public void go_Yes(View view) {
+    	Intent intent = new Intent(this, DisplaySubmitActivity.class);
+    	startActivity(intent);
+    }
+    
+    /** Called when user clicks the NO button */
+    public void go_No(View view) {
+    	Intent intent = new Intent(this, DisplayGetActivity.class);
+    	startActivity(intent);
+    }
 
 }

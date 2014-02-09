@@ -1,9 +1,18 @@
 package com.example.whynot;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.StatusLine;
+import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
 
 import android.annotation.SuppressLint;
@@ -11,7 +20,9 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.support.v4.app.NavUtils;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -80,6 +91,38 @@ public class DisplayGiveActivity extends Activity {
 		
 		EditText editText = (EditText) findViewById(R.id.submission);
     	String message = editText.getText().toString();
+    	
+		  StrictMode.ThreadPolicy policy = new StrictMode.
+				  ThreadPolicy.Builder().permitAll().build();
+				    StrictMode.setThreadPolicy(policy); 
+    	
+    	StringBuilder builder = new StringBuilder();
+        HttpClient client = new DefaultHttpClient();
+        HttpPost httpPost = new HttpPost("http://hbpchallenge.herokuapp.com/challenge");
+        try {
+        	StringEntity params = new StringEntity("{ 'description' :" + message + "}");
+        	System.out.println(params);
+        	httpPost.addHeader("content-type", "application/json");
+        	httpPost.setEntity(params);
+          HttpResponse response = client.execute(httpPost);
+          StatusLine statusLine = response.getStatusLine();
+          int statusCode = statusLine.getStatusCode();
+          if (statusCode == 200) {
+            HttpEntity entity = response.getEntity();
+            InputStream content = entity.getContent();
+            BufferedReader reader = new BufferedReader(new InputStreamReader(content));
+            String line;
+            while ((line = reader.readLine()) != null) {
+              builder.append(line);
+            }
+          } else {
+            Log.e(DisplayExploreActivity.class.toString(), "Failed to download file");
+          }
+        } catch (ClientProtocolException e) {
+          e.printStackTrace();
+        } catch (IOException e) {
+          e.printStackTrace();
+        }
 		
 		// After submitting go to Confirmation/SubmitAnother Screen
 		Intent intent = new Intent(this, DisplayGiveConfirmationActivity.class);
