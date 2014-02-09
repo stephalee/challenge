@@ -99,8 +99,8 @@ public class DisplayExploreActivity extends Activity {
 //              .show();
 //         
 //          }
-//
-//     }); 
+
+     }); 
 	//method that controls completed/submitted challenges
 //	public void onToggleClicked(View view) {
 //	    // Is the toggle on?

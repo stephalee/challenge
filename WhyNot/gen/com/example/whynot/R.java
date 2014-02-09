@@ -21,15 +21,20 @@ public final class R {
         public static final int activity_vertical_margin=0x7f040001;
     }
     public static final class drawable {
-        public static final int ic_launcher=0x7f020000;
+        public static final int home_eight=0x7f020000;
+        public static final int home_name=0x7f020001;
+        public static final int home_pen=0x7f020002;
+        public static final int home_rocket=0x7f020003;
+        public static final int ic_launcher=0x7f020004;
     }
     public static final class id {
-        public static final int action_settings=0x7f080005;
-        public static final int button_explore=0x7f080004;
-        public static final int button_get=0x7f080002;
-        public static final int button_give=0x7f080003;
-        public static final int submission=0x7f080000;
-        public static final int test=0x7f080001;
+        public static final int action_settings=0x7f080006;
+        public static final int button_explore=0x7f080005;
+        public static final int button_get=0x7f080003;
+        public static final int button_give=0x7f080004;
+        public static final int home_name=0x7f080002;
+        public static final int list=0x7f080000;
+        public static final int submission=0x7f080001;
     }
     public static final class layout {
         public static final int activity_display_explore=0x7f030000;
@@ -94,7 +99,13 @@ public final class R {
         /**  All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f060001;
-        public static final int Button_style=0x7f060003;
+        public static final int Button_style=0x7f060005;
+        /**  the theme applied to the application or activity 
+         */
+        public static final int CustomActionBarTheme=0x7f060003;
+        /**  ActionBar styles 
+         */
+        public static final int MyActionBar=0x7f060004;
         /**  Custom styles. 
          */
         public static final int MyTheme=0x7f060002;

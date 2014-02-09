@@ -17,9 +17,9 @@
     android:onClick="onToggleClicked"/> -->
     
     <ListView
-      	android:id="@+id/list"
-     	android:layout_height="wrap_content"
-      	android:layout_width="match_parent">
+      android:id="@+id/list"
+      android:layout_height="wrap_content"
+      android:layout_width="match_parent">
     </ListView>
     
     <TextView
