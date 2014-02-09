@@ -1,10 +1,24 @@
 package com.example.whynot;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.StatusLine;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.DefaultHttpClient;
+
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -51,66 +65,4 @@ public class DisplayExploreActivity extends Activity {
 		}
 		return super.onOptionsItemSelected(item);
 	}
-	
-	
-	 // Get ListView object from xml
-//    listView = (ListView) findViewById(R.id.list);
-//    
-//    // Defined Array values to show in ListView
-//    String[] values = new String[] { "Android List View", 
-//                                     "Adapter implementation",
-//                                     "Simple List View In Android",
-//                                     "Create List View Android", 
-//                                     "Android Example", 
-//                                     "List View Source Code", 
-//                                     "List View Array Adapter", 
-//                                     "Android Example List View" 
-//                                    };
-//
-//    // Define a new Adapter
-//    // First parameter - Context
-//    // Second parameter - Layout for the row
-//    // Third parameter - ID of the TextView to which the data is written
-//    // Forth - the Array of data
-//
-//    ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-//      android.R.layout.simple_list_item_1, android.R.id.text1, values);
-//
-//
-//    // Assign adapter to ListView
-//    listView.setAdapter(adapter); 
-//    
-//    // ListView Item Click Listener
-//    listView.setOnItemClickListener(new OnItemClickListener() {
-//
-//          @Override
-//          public void onItemClick(AdapterView<?> parent, View view,
-//             int position, long id) {
-//            
-//           // ListView Clicked item index
-//           int itemPosition     = position;
-//           
-//           // ListView Clicked item value
-//           String  itemValue    = (String) listView.getItemAtPosition(position);
-//              
-//            // Show Alert 
-//            Toast.makeText(getApplicationContext(),
-//              "Position :"+itemPosition+"  ListItem : " +itemValue , Toast.LENGTH_LONG)
-//              .show();
-//         
-//          }
-//
-//     }); 
-	//method that controls completed/submitted challenges
-//	public void onToggleClicked(View view) {
-//	    // Is the toggle on?
-//	    boolean on = ((ToggleButton) view).isChecked();
-//	    
-//	    if (on) {
-//	        // Enable vibrate
-//	    } else {
-//	        // Disable vibrate
-//	    }
-//	}
-
-}
+} 
