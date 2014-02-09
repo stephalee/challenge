@@ -28,7 +28,8 @@
         <activity
             android:name="com.example.whynot.DisplayGetActivity"
             android:label="@string/title_activity_display_get"
-            android:parentActivityName="MainActivity" >
+            android:parentActivityName="MainActivity"
+            android:theme="@style/OrangeTheme" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="MainActivity" />
@@ -36,7 +37,8 @@
         <activity
             android:name="com.example.whynot.DisplayGiveActivity"
             android:label="@string/title_activity_display_give"
-            android:parentActivityName="com.example.whynot.MainActivity" >
+            android:parentActivityName="com.example.whynot.MainActivity"
+            android:theme="@style/BlueTheme" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.whynot.MainActivity" />
@@ -44,18 +46,11 @@
         <activity
             android:name="com.example.whynot.DisplayExploreActivity"
             android:label="@string/title_activity_display_create"
-            android:parentActivityName="com.example.whynot.MainActivity" >
+            android:parentActivityName="com.example.whynot.MainActivity"
+            android:theme="@style/BlueTheme" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.whynot.MainActivity" />
-        </activity>
-        <activity
-            android:name="com.example.whynot.DisplayGiveConfirmationActivity"
-            android:label="@string/title_activity_display_give"
-            android:parentActivityName="com.example.whynot.DisplayGiveActivity" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.whynot.DisplayGiveActivity" />
         </activity>
     </application>
 

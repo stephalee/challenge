@@ -99,15 +99,17 @@ public final class R {
         /**  All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f060001;
-        public static final int Button_style=0x7f060005;
+        public static final int BlueTheme=0x7f060003;
+        public static final int Button_style=0x7f060007;
         /**  the theme applied to the application or activity 
          */
-        public static final int CustomActionBarTheme=0x7f060003;
+        public static final int CustomActionBarTheme=0x7f060005;
         /**  ActionBar styles 
          */
-        public static final int MyActionBar=0x7f060004;
+        public static final int MyActionBar=0x7f060006;
         /**  Custom styles. 
          */
         public static final int MyTheme=0x7f060002;
+        public static final int OrangeTheme=0x7f060004;
     }
 }
