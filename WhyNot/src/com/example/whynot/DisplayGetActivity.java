@@ -15,6 +15,7 @@ import org.apache.http.impl.client.DefaultHttpClient;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.StrictMode;
@@ -22,6 +23,7 @@ import android.support.v4.app.NavUtils;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 
 public class DisplayGetActivity extends Activity {
@@ -103,5 +105,17 @@ public class DisplayGetActivity extends Activity {
     }
     return builder.toString();
   }
+	
+    /** Called when user clicks the YES button */
+    public void go_Yes(View view) {
+    	Intent intent = new Intent(this, DisplaySubmitActivity.class);
+    	startActivity(intent);
+    }
+    
+    /** Called when user clicks the NO button */
+    public void go_No(View view) {
+    	Intent intent = new Intent(this, DisplayGetActivity.class);
+    	startActivity(intent);
+    }
 
 }
