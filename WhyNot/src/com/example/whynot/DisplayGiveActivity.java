@@ -120,6 +120,7 @@ public class DisplayGiveActivity extends Activity {
 	
 	
 	//TODO: Make faster by using asnyc tasks
+	//lalalalal
 //    private class GiveActivityAsyncTask extends AsyncTask<String, Void, String> {
 //
 //        @Override
