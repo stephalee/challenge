@@ -63,6 +63,7 @@ public final class R {
          */
         public static final int get=0x7f050002;
         public static final int give=0x7f050003;
+        public static final int go_home=0x7f050014;
         public static final int goback=0x7f050011;
         public static final int hello_world=0x7f050009;
         public static final int no=0x7f05000e;
@@ -76,6 +77,7 @@ public final class R {
         public static final int title_activity_display_create_another=0x7f050007;
         public static final int title_activity_display_get=0x7f050008;
         public static final int title_activity_display_give=0x7f05000a;
+        public static final int title_activity_display_give_confirmation=0x7f050013;
         public static final int title_activity_display_submit=0x7f050012;
         public static final int yes=0x7f05000d;
     }

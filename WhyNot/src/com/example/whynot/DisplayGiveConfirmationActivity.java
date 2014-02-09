@@ -61,10 +61,15 @@ public class DisplayGiveConfirmationActivity extends Activity{
 		return super.onOptionsItemSelected(item);
 	}
 	
-	// submit users challenge to Firebase
-	// THIS NEEDS TO BE CHANGED
+	// Sends the user back to the previous page in order to submit another challenge
 	public void go_SubmitAnother(View view) {
 		Intent intent = new Intent(this, DisplayGiveActivity.class);
+    	startActivity(intent);
+	}
+	
+	// Sends the user back to the home screen after creating a new challenge
+	public void go_GoHome(View view) {
+		Intent intent = new Intent(this, MainActivity.class);
     	startActivity(intent);
 	}
 
