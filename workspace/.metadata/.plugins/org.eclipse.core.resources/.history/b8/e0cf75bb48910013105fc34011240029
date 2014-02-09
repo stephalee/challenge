@@ -8,19 +8,13 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".DisplayExploreActivity" >
 
-<!--     <ToggleButton 
+    <ToggleButton 
     android:id="@+id/togglebutton"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:textOn="completed"
     android:textOff="submitted"
-    android:onClick="onToggleClicked"/> -->
-    
-    <ListView
-      	android:id="@+id/list"
-     	android:layout_height="wrap_content"
-      	android:layout_width="match_parent">
-    </ListView>
+    android:onClick="onToggleClicked"/>
     
     <TextView
         android:layout_width="wrap_content"

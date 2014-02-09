@@ -22,8 +22,8 @@
         android:src="@drawable/home_eight"
 		android:layout_gravity="center"
 		android:layout_marginTop ="50dp"
-        android:layout_width="90dp"
-        android:layout_height="90dp"
+        android:layout_width="92dp"
+        android:layout_height="92dp"
         android:onClick="go_Get" />
        <LinearLayout
 		android:orientation="horizontal"
