@@ -9,15 +9,47 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity" >
     
-<!--     Test for styles -->
-       <TextView 
-        android:id="@+id/test"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="testing text color" />
+<!--   Home Images -->
+       <ImageView
+        android:id="@+id/home_name"
+        android:src="@drawable/home_name"
+		android:layout_gravity="center"
+        android:layout_width="241dp"
+        android:layout_height="64dp" />
+       <ImageView
+        android:id="@+id/button_get"
+        android:src="@drawable/home_eight"
+		android:layout_gravity="center"
+		android:layout_marginTop ="50dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:onClick="go_Get" />
+       <LinearLayout
+		android:orientation="horizontal"
+		android:layout_width="400dp"
+		android:layout_height="match_parent"
+		android:gravity="center"
+		tools:context=".MainActivity" >
+       <ImageView
+        android:id="@+id/button_give"
+        android:src="@drawable/home_pen"
+        android:layout_width="100dp"
+        android:layout_height="100dp" 
+        android:onClick="go_Give"
+        android:layout_gravity="left" />
+       
+      <ImageView
+        android:id="@+id/button_explore"
+        android:src="@drawable/home_rocket"
+        android:layout_width="100dp"
+        android:layout_height="100dp" 
+        android:onClick="go_Explore"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:layout_gravity="right" />
+      </LinearLayout>
     
 <!--     Button to get a challenge -->
-       <Button
+      <!--  <Button
         android:id="@+id/button_get"
 		android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -25,7 +57,7 @@
         android:onClick="go_Get" 
         style="@style/Button_style"/>
        
-<!--        Button to give a challenge -->
+       Button to give a challenge
        <Button
         android:id="@+id/button_give"
         android:layout_width="wrap_content"
@@ -34,14 +66,14 @@
         android:onClick="go_Give" 
         style="@style/Button_style" />
        
-<!--        Button to Explore Challenges -->
+       Button to Explore Challenges
        <Button
         android:id="@+id/button_explore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/explore"
         android:onClick="go_Explore" 
-        style="@style/Button_style" />
+        style="@style/Button_style" /> -->
         
 
 </LinearLayout>
