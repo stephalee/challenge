@@ -12,29 +12,30 @@
 <!--      Challenge text pulled from database -->
        <TextView
         android:id="@+id/chal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        style="@style/Body_text"
+        android:layout_marginTop ="120dp" />
     
 <!--     Button for user to accept challenge -->
      <LinearLayout 
     	android:orientation="horizontal"
     	android:layout_width="match_parent"
-    	android:layout_height="match_parent" >
-       <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    	android:layout_height="match_parent"
+    	android:layout_marginTop ="110dp" >
+       <ImageView
+        android:src="@drawable/yes"
+        android:layout_width="100dp"
+        android:layout_height="115dp"
         android:layout_weight="1"
-        android:text="@string/yes"
-        style="@style/Button_style"
         android:onClick="go_Yes" />
            
 <!--        Button for user not to accept challenge -->
-       <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+       <ImageView
+        android:src="@drawable/no"
+        android:layout_width="100dp"
+        android:layout_height="115dp"
        	android:layout_weight="1"
-        android:text="@string/no"
-        style="@style/Button_style"
         android:onClick="go_No" />
        
       </LinearLayout>  

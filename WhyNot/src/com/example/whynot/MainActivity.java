@@ -5,6 +5,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.widget.Toast;
 
 //import com.firebase.client.ChildEventListener;
 //import com.firebase.client.DataSnapshot;
@@ -35,14 +38,48 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-
-    // Creates the action bar and populates it with options 
+    
+ // Initiating Menu XML file (menu.xml)
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
+    public boolean onCreateOptionsMenu(Menu menu)
+    {
+        MenuInflater menuInflater = getMenuInflater();
+        menuInflater.inflate(R.menu.main, menu);
         return true;
     }
+     
+    /**
+     * Event Handling for Individual menu item selected
+     * Identify single menu item by it's id
+     * */
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item)
+    {
+         
+        switch (item.getItemId())
+        {
+        case R.id.menu_home:
+            // Single menu item is selected do something
+            // Ex: launching new activity/screen or show alert message
+            Toast.makeText(MainActivity.this, "Bookmark is Selected", Toast.LENGTH_SHORT).show();
+            return true;
+ 
+        case R.id.menu_get:
+            Toast.makeText(MainActivity.this, "Save is Selected", Toast.LENGTH_SHORT).show();
+            return true;
+ 
+        case R.id.menu_give:
+            Toast.makeText(MainActivity.this, "Search is Selected", Toast.LENGTH_SHORT).show();
+            return true;
+ 
+        case R.id.menu_explore:
+            Toast.makeText(MainActivity.this, "Share is Selected", Toast.LENGTH_SHORT).show();
+            return true;
+ 
+        default:
+            return super.onOptionsItemSelected(item);
+        }
+    }    
     
     /** Called when user clicks the GET button */
     public void go_Get(View view) {

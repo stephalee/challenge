@@ -29,7 +29,7 @@
     </style>
     
 	<style name="OrangeTheme" parent="AppTheme">
-        <item name="android:background">#F47E3F</item>
+        <item name="android:background">#6C98CF</item>
         <item name="android:textColor">#fff</item>
     </style>
     
@@ -41,6 +41,12 @@
     <!-- ActionBar styles -->
     <style name="MyActionBar">
         <item name="android:background">#515C63</item>
+    </style>
+    
+    <style name="Body_text">
+    	<item name="android:textColor" >#ffffff</item>
+    	<item name="android:gravity" >center</item>
+    	<item name="android:textSize" >24dp</item>
     </style>
     
 	<style name="Button_style">

@@ -23,25 +23,23 @@
         android:orientation="horizontal"
         android:layout_width="fill_parent"
     	android:layout_height="match_parent"
-    	android:layout_marginTop="75dp"
+    	android:layout_marginTop="30dp"
     	tools:context=".DisplayGiveActivity" >
 <!--     Submit Button -->
-       <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/submit"
+       <ImageView
+        android:src="@drawable/submit"
+        android:layout_width="90dp"
+    	android:layout_height="44dp"
         android:layout_weight="1"
-        android:onClick="go_Submit" 
-        style="@style/Button_style"/>
+        android:onClick="go_Submit" />
       
 <!--        Go Back Button -->
-       <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/goback"
+       <ImageView
+        android:src="@drawable/go_back"
+        android:layout_width="102dp"
+    	android:layout_height="44dp"
         android:layout_weight="1"
-        android:onClick="go_Back"
-        style="@style/Button_style" />
+        android:onClick="go_Back" />
        </LinearLayout>
 
 </LinearLayout>
