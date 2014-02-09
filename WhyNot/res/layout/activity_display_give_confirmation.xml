@@ -18,5 +18,12 @@
        android:layout_height="wrap_content"
        android:text="@string/submit_another_challenge"
        android:onClick="go_SubmitAnother" />
+      
+    <!-- 'Go Home' Button -->
+      <Button
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="@string/go_home"
+       android:onClick="go_GoHome" />
        
 </LinearLayout>
