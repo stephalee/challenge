@@ -7,6 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:layout_marginTop="75dp"
     tools:context=".MainActivity" >
     
 <!--   Home Images -->
@@ -26,21 +27,23 @@
         android:onClick="go_Get" />
        <LinearLayout
 		android:orientation="horizontal"
-		android:layout_width="400dp"
+		android:layout_width="match_parent"
 		android:layout_height="match_parent"
 		android:gravity="center"
 		tools:context=".MainActivity" >
        <ImageView
         android:id="@+id/button_give"
         android:src="@drawable/home_pen"
+        android:layout_weight="1"
         android:layout_width="100dp"
         android:layout_height="100dp" 
         android:onClick="go_Give"
+        android:paddingTop="@dimen/activity_vertical_margin"
         android:layout_gravity="left" />
-       
-      <ImageView
+       <ImageView
         android:id="@+id/button_explore"
         android:src="@drawable/home_rocket"
+        android:layout_weight="1"
         android:layout_width="100dp"
         android:layout_height="100dp" 
         android:onClick="go_Explore"

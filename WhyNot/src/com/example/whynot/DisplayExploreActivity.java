@@ -51,5 +51,17 @@ public class DisplayExploreActivity extends Activity {
 		}
 		return super.onOptionsItemSelected(item);
 	}
+	
+	//method that controls completed/submitted challenges
+//	public void onToggleClicked(View view) {
+//	    // Is the toggle on?
+//	    boolean on = ((ToggleButton) view).isChecked();
+//	    
+//	    if (on) {
+//	        // Enable vibrate
+//	    } else {
+//	        // Disable vibrate
+//	    }
+//	}
 
 }
